@@ -2,26 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Sqaure extends React.Component {
-
-    // Don't need to keep track on Square's state
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         value: null,
-    //     }
-    // }
-
-    render() {
-        return(
-            <button 
+function Sqaure(props) {
+    return (
+        <button 
             className="square" 
-            onClick={() => this.props.onClick() }
+            onClick={props.onClick}
             >
-            { this.props.value }
+            { props.value }
             </button>
-        );
-    }
+    );
 }
 
 class Board extends React.Component {
